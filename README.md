@@ -17,13 +17,17 @@ fMRI Preprocessing Pipeline for BIS
 
 > Step 1. Skull stripping (optiBET)
 
-> Step 2. Nonlinear registration of subject anatomicals to common space
+> Step 2. Nonlinear registration of subject anatomicals to common space (BIS)
 
 > Step 3. Slice time correction (SPM)
 
 > Step 4. Motion correction (SPM)
 
-> Step 5. Linear registration of mean functionals to subject anatomicals
+> Step 5. Linear registration of mean functionals to subject anatomicals (BIS)
+
+> Step 6. Final check of previous steps
+
+> Step 7. Final Study Processing (GLM, connectivity, etc; BIS) 
 
 ### Usage
 `bis_preprocessing_pipeline.sh <config_file>`
