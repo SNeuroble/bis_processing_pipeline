@@ -1,0 +1,172 @@
+#BioImageSuite Study Description File v2
+#-----------------------------------------------------
+#Study Title
+Xdataset_nameX
+#Subject ID
+XsubjectIDX
+#-----------------------------------------------------
+#Anatomical Data
+#-----------------------------------------------------
+#Reference Brain
+Xreference_imgX
+#Reference Gray/White/CSF Map
+Xwm_csf_imgX
+#3D Anatomical Image
+XanatX
+#Conventional Image
+
+#Ref-> 3D Anatomical Transformation
+Xnonlinear_transformX
+#3D Anatomical -> Conventional Transformation
+Xidentity_matrixX
+#Conventional -> EPI Transformation
+Xlinear_transformX
+#-----------------------------------------------------
+#Basic Parameters
+#-----------------------------------------------------
+#Session ID
+NA
+#Session Description
+NA
+#Number of Runs
+1
+#Number of Tasks
+0
+#Number of Outcomes
+0
+#Repetition Time (TR)
+XtrX
+#Number of Slices
+Xn_slicesX
+#Number of Frames
+Xn_framesX
+#Skip Frames On
+0
+#Frames to Skip
+
+#-----------------------------------------------------
+#Outputs Files/Locations
+#-----------------------------------------------------
+#XML Output File
+
+#XML Output Directory
+
+#Data Output Directory
+Xoutput_dirX
+#-----------------------------------------------------
+#Runs
+#-----------------------------------------------------
+#Run 1 (first line=4D Image, second line=Matrix with Motion Parameters)
+XfuncX
+XmotX
+No Skip
+#-----------------------------------------------------
+#Tasks
+#-----------------------------------------------------
+#Task 1
+#-----------------------------------------------------
+#Blocks
+#-----------------------------------------------------
+#Block Definition Time (1=seconds, 0 =frames)
+0
+#-----------------------------------------------------
+#Outcomes
+#-----------------------------------------------------
+#-----------------------------------------------------
+#GLM Processing and AFNI Integration
+#-----------------------------------------------------
+#Ensure Inputs are NIFTI
+ensurenifti : 0
+#Delete Temporary Files
+deletetemp : 1
+#Mask Level (% of max intensity)
+masklevel : 0.05
+#HRF Mode -- one of wav, gamma, doublegamma, triplegamma spm
+hrfmode : wav
+#Use AFNI Waver; if 0 use internal code which is cleaner/faster etc
+useafniwaver : 0
+#Use AFNI Commands for intensity normalization; if 0 use internal code which is cleaner/faster etc
+useafninormalize : 0
+#GLM Delaytime
+delaytime : 2.0
+#GLM Risetime
+risetime : 4.0
+#GLM Falltime
+falltime : 6.0
+#GLM Undershoot
+undershoot : 0.2
+#GLM Peak
+peak : 1.0
+#Polynomial Drift
+polort : 3
+#Output Baseline Coefficientts
+bout : 0
+#Output F-Statistics
+fout : 0
+#Output R^2-Statistics
+rout : 0
+#Output T-Statistics
+tout : 0
+#Output Residual Time Series
+saveresidual : 0
+#Output Drift Beta Maps
+savedriftbeta : 0
+#Output Sample Variance Map
+vout : 0
+#GLM Single Run Output
+glmsinglerunoutput : 0
+#GLM Regress Motion Parameters
+glmregressmotion : 0
+#Rate GLM Terms
+numrateterms : 1
+#Rate GLM Global Drift
+rateglobal : 0
+#-----------------------------------------------------
+#Resting State Connectivity Extra Inputs
+#-----------------------------------------------------
+#VOI Definition
+XparcellationX
+#VOI Definition Space (Reference,Anatomical,Conventional,Functional)
+Reference
+#Inverse Reference Transformation
+Xnonlinear_transform_inverseX
+#-----------------------------------------------------
+#Connectivity Parameters
+#-----------------------------------------------------
+#Mask Level (% of max intensity)
+masklevel : 0.05
+#Polynomial Drift
+driftpol : 3
+# Slice Mean Removal 
+slicemeanremoval : 0
+# Volume Mean Removal 
+volumemeanremoval : 1
+#Raw Correlation
+rawcorrelation : 0
+#Z Transform
+ztransform : 0
+#Process Runs Individually
+individualruns : 1
+#Temporal Smoothing Sigma (Frames)
+temporalsigma : Xtemporal_sigmaX
+#Intrinsic Connectivity Threshold
+threshold : 0.25
+#Intrinsic Connectivity Range
+range : Positive
+#Intrinsic Connectivity Mode
+mode : Sqr
+#Use VOI Image as mask For Intrinsic Connectivity
+usermask : 1
+#Preprocess (Eliminate Motion Parameters)
+usemotionparams : 1
+#Preprocess (Eliminate CSF/White Matter Mean)
+usecsfmean : XgsrX
+#-----------------------------------------------------
+#Extra GLM Parameters Parameters
+#-----------------------------------------------------
+#Use External Matrix File
+useexternalmatrix : 0
+#External Matrix FileName
+externalmatrixfilename : 
+#Do Convolution with HRF
+doconvolution : 1
