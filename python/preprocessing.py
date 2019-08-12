@@ -46,8 +46,8 @@ def main():
             print('step4: motion correction')
             step4(func_dir)
 
-            print('step5: aquiring correlation matrices')
-            step5(anat_dir,func_dir)
+            print('step5,6: aquiring correlation matrices')
+            step56(anat_dir,func_dir)
 
  
 def step1(anat_dir):
@@ -105,14 +105,14 @@ def step4(func_dir):
             f.close()
             subprocess.call(["sh","moco_session3.csh"])
 
-def step5(anat_dirfunc_dir):
-    for file in os.listdir(func_dir): # step 6: linear registeration to skull-stripped anatomical image
+def step56(anat_dirfunc_dir):
+    for file in os.listdir(func_dir): # step 5: linear registeration to skull-stripped anatomical image
         if file.endswith(".hdr"):
             subprocess.call(["pxtonifti.tcl",os.path.join(func_dir,file)])
         if file.endswith(".nii") and file.startswith("mean"):
             mean_moco_file = file
-        for file in os.listdir(anat_dir): # step 6: linear registeration to skull-stripped anatomical image
-                if file.endswith(".nii.gz") and "optiBET_brain" in file and "mask" not in file and "weight" not in file :
+        for file in os.listdir(anat_dir):
+            if file.endswith(".nii.gz") and "optiBET_brain" in file and "mask" not in file and "weight" not in file :
                         print('step 6: linear registeration to skull-stripped anatomical image %s'%file)
                         anat_optiBET = file
                         f = open("linear_registeration_setup","w")
@@ -133,7 +133,7 @@ def step5(anat_dirfunc_dir):
         for file in os.listdir(os.path.join(func_dir,'realign')):    
             if file.endswith('_bold_hiorder.mat') and file.startswith('REALIGN_'):
                 realign_mat = os.path.join('realign',file)
-        for file in os.listdir(func_dir): # step 5: build mean functional image
+        for file in os.listdir(func_dir): # step 6: build connectivity matrix
             f = open("subj.xmlg","w")
             f.write("#BioImageSuite Study Description File v2\n")
             f.write("#-----------------------------------------------------\n")
