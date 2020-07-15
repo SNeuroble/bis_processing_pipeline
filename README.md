@@ -2,7 +2,7 @@
 
 fMRI Preprocessing Pipeline for BIS
 
-** The following documentation is for bash scripts only **
+Note: The following documentation covers my bash scripts only. The nice Python scripts created by [Javid Dadashkarimi](https://github.com/dadashkarimi)
 
 ## Getting Started
 
