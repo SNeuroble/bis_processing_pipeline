@@ -1,9 +1,13 @@
 # BIS Processing Pipeline
+
 fMRI Preprocessing Pipeline for BIS
+
+** The following documentation is for bash scripts only **
 
 ## Getting Started
 
 ### Preprequisites
+
 1. Required software: BIS (legacy), FSL, AFNI, SPM, Matlab
 
 2. Data must be in BIDS format (e.g., subID/session1/func/task1\_run1.nii.gz, subID/session1/anat, etc.)
@@ -30,7 +34,8 @@ fMRI Preprocessing Pipeline for BIS
 > Step 7. Final Study Processing (GLM, connectivity, etc; BIS) 
 
 ### Usage
-`bis_preprocessing_pipeline.sh <config_file>`
 
-Example: `bis_preprocessing_pipeline.sh configs/cfg.sh`
+1. Edit paths and parameters in config/cfg.sh
+
+2. Run `bis_processing_pipeline.sh config/cfg.sh`
 

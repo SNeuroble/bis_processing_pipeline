@@ -1,23 +1,8 @@
-set inputlist(1)
-xstripped_img
-
-set inputlist(2)
-xmean_func
-
-set inputlist(3)
-*ignore*
-
-set inputlist(4)
-*ignore*
-
-set inputlist(5)
-*ignore*
-
-set outputsuffix
-xlinear_trans_suffix
-
-set logsuffix
-"results"
-
-set cmdline
-"bis_linearbrainregister.tcl"
+set inputlist(1) {Xstripped_img}
+set inputlist(2) {Xmean_func}
+set inputlist(3) {*ignore*}
+set inputlist(4) {*ignore*}
+set inputlist(5) {*ignore*}
+set outputsuffix {Xlinear_trans_suffix}
+set logsuffix "results"
+set cmdline "bis_linearintensityregister.tcl"

@@ -1,23 +1,8 @@
-set inputlist(1)
-xreference_img
-
-set inputlist(2)
-xanat_img
-
-set inputlist(3)
-*ignore*
-
-set inputlist(4)
-*ignore*
-
-set inputlist(5)
-*ignore*
-
-set outputsuffix
-xnonlinear_trans_suffix
-
-set logsuffix
-"results"
-
-set cmdline
-"bis_nonlinearbrainregister.tcl"
+set inputlist(1) {Xreference_img}
+set inputlist(2) {Xanat_img}
+set inputlist(3) {*ignore*}
+set inputlist(4) {*ignore*}
+set inputlist(5) {*ignore*}
+set outputsuffix {Xnonlinear_trans_suffix}
+set logsuffix "results"
+set cmdline "bis_nonlinearbrainregister.tcl"

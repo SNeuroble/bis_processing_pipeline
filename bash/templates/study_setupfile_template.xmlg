@@ -1,26 +1,26 @@
 #BioImageSuite Study Description File v2
 #-----------------------------------------------------
 #Study Title
-Xdataset_nameX
+Xdataset_name
 #Subject ID
-XsubjectIDX
+XsubjectID
 #-----------------------------------------------------
-#Anatomical Data
+#Anatomcal Data
 #-----------------------------------------------------
 #Reference Brain
-Xreference_imgX
+Xreference_img
 #Reference Gray/White/CSF Map
-Xwm_csf_imgX
+Xwm_csf_img
 #3D Anatomical Image
-XanatX
+Xanat
 #Conventional Image
 
 #Ref-> 3D Anatomical Transformation
-Xnonlinear_transformX
+Xnonlinear_transform
 #3D Anatomical -> Conventional Transformation
-Xidentity_matrixX
+Xidentity_matrix
 #Conventional -> EPI Transformation
-Xlinear_transformX
+Xlinear_transform
 #-----------------------------------------------------
 #Basic Parameters
 #-----------------------------------------------------
@@ -29,17 +29,17 @@ NA
 #Session Description
 NA
 #Number of Runs
-1
+Xnruns
 #Number of Tasks
 0
 #Number of Outcomes
 0
 #Repetition Time (TR)
-XtrX
+Xtr
 #Number of Slices
-Xn_slicesX
+Xn_slices
 #Number of Frames
-Xn_framesX
+Xn_frames
 #Skip Frames On
 0
 #Frames to Skip
@@ -52,18 +52,16 @@ Xn_framesX
 #XML Output Directory
 
 #Data Output Directory
-Xoutput_dirX
+Xoutput_dir
 #-----------------------------------------------------
 #Runs
 #-----------------------------------------------------
 #Run 1 (first line=4D Image, second line=Matrix with Motion Parameters)
-XfuncX
-XmotX
+Xfunc_and_motion
 No Skip
 #-----------------------------------------------------
 #Tasks
 #-----------------------------------------------------
-#Task 1
 #-----------------------------------------------------
 #Blocks
 #-----------------------------------------------------
@@ -125,11 +123,11 @@ rateglobal : 0
 #Resting State Connectivity Extra Inputs
 #-----------------------------------------------------
 #VOI Definition
-XparcellationX
+Xparcellation
 #VOI Definition Space (Reference,Anatomical,Conventional,Functional)
 Reference
 #Inverse Reference Transformation
-Xnonlinear_transform_inverseX
+
 #-----------------------------------------------------
 #Connectivity Parameters
 #-----------------------------------------------------
@@ -148,7 +146,7 @@ ztransform : 0
 #Process Runs Individually
 individualruns : 1
 #Temporal Smoothing Sigma (Frames)
-temporalsigma : Xtemporal_sigmaX
+temporalsigma : Xtemporal_sigma
 #Intrinsic Connectivity Threshold
 threshold : 0.25
 #Intrinsic Connectivity Range
@@ -160,7 +158,7 @@ usermask : 1
 #Preprocess (Eliminate Motion Parameters)
 usemotionparams : 1
 #Preprocess (Eliminate CSF/White Matter Mean)
-usecsfmean : XgsrX
+usecsfmean : Xgsr
 #-----------------------------------------------------
 #Extra GLM Parameters Parameters
 #-----------------------------------------------------
